@@ -7,15 +7,14 @@ import {
   deleteTodo,
   completedTodos,
 } from "../controller/todoController.js";
-import router from "./userRoutes.js";
 
 const routerTodo = express.Router();
 
 routerTodo.get("/", getAllTodos);
 routerTodo.post("/add", createTodo);
 routerTodo.put("/update/:id", updateTodo);
-routerTodo.get("/:id", getById);
+routerTodo.get("/:id/todos", getById);
 routerTodo.delete("/delete/:id", deleteTodo);
-routerTodo.get("/completed", completedTodos);
+routerTodo.patch("/completed", completedTodos);
 
 export default routerTodo;

@@ -76,4 +76,14 @@ const login = async (req, res) => {
   }
 };
 
-export { getAllUsers, signup, login };
+const getUserTodo = async (req, res) => {
+  try {
+    const user = req.user;
+    const userWithTodos = await User.findById(user.userID).populate("todos");
+    res.status(200).json(userWithTodos.todos);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+export { getAllUsers, signup, login, getUserTodo };
