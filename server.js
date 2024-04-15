@@ -1,6 +1,7 @@
 import "./config.js";
 import express from "express";
 import logEndpoints from "./utils/logEndpoints.js";
+import "./db-connect.js";
 
 const port = process.env.PORT;
 const app = express();
