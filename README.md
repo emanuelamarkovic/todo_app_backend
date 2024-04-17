@@ -9,7 +9,7 @@ Starting the application:bashnpmstart The application is started on the configur
 Endpoints
 
 User endpoints:
-POST /api/user/signup: Registers a new user. Required parameters: name, email, password.
+POST /api/user/signup: Registers a new user. Required parameters: name, email, password./n
 POST /api/user/login: Authenticates a user. Required parameters: email, password.
 GET /api/user/: Retrieves all users.
 Todo endpoints:
